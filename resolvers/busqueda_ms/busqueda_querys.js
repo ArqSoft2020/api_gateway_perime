@@ -11,12 +11,12 @@ export const productos = async (_, args, ctx) => {
     return await axios.get(`http://${ctx.BUSQUEDA_URL}:${ctx.BUSQUEDA_PORT}/${ctx.BUSQUEDA_BASE_ENDPOINT}/productos`).then(res => res.data)    
 }
 
-/* GET ITEM categoria BY ID IN DATABASE */
+/* GET ITEM producto BY ID IN DATABASE */
 export const getCategoria= async (_, {id}, ctx) => {
     return await axios.get(`http://${ctx.BUSQUEDA_URL}:${ctx.BUSQUEDA_PORT}/${ctx.BUSQUEDA_BASE_ENDPOINT}/categoria/${id}`).then(res => res.data)
 }
-/* GET ITEM categoria BY ID IN DATABASE */
-export const getCategoria= async (_, {id}, ctx) => {
+/* GET ITEM producto BY ID IN DATABASE */
+export const getProducto= async (_, {id}, ctx) => {
     return await axios.get(`http://${ctx.BUSQUEDA_URL}:${ctx.BUSQUEDA_PORT}/${ctx.BUSQUEDA_BASE_ENDPOINT}/producto/${id}`).then(res => res.data)
 }
 
