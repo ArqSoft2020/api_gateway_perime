@@ -9,6 +9,8 @@ services:
       MULTIMEDIA_URL: 'ec2-54-173-77-159.compute-1.amazonaws.com'
       MULTIMEDIA_PORT: '9000'
       MULTIMEDIA_BASE_ENDPOINT: 'api/multimedia'
-
+      BUSQUEDA_URL: 'ehttp://54.159.91.236'
+      BUSQUEDA_PORT: '33061'
+      BUSQUEDA_BASE_ENDPOINT: ''
     ports:
       - '3000:3000'
