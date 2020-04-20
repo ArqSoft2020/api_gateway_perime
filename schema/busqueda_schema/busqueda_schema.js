@@ -1,13 +1,12 @@
 export const busqueda_schema = `
-
     type Categoria {
-        id: ID
+        _id: ID
         nombrecategoria: String
         tipocategoria: String
     }
     type Producto{
-        id: ID
-        categoriaid Int
+        _id: ID
+        categoriaid: Int
         tipocategoria: String
         descripcioncategoria: String
     }
@@ -15,10 +14,10 @@ export const busqueda_schema = `
 `
 
 export const busqueda_querys = `
-    getCategoria(id : ID): Categoria
+    getCategoria(id: ID): Categoria
     categorias: [Categoria]
-    getProducto(id : ID): Producto
-    productos: [Categoria]
+    getProducto(id: ID): Producto
+    productos: [Producto]
 `
 
 export const busqueda_mutations = `
@@ -28,4 +27,4 @@ export const busqueda_mutations = `
     postProducto(id: ID): Producto
     putProducto(id: ID): Producto
     deleteProducto(id: ID): Producto
-`   
+`
