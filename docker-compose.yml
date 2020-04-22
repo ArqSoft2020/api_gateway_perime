@@ -6,9 +6,15 @@ services:
       PORT: '3000'
       SHOW_URLS: 'true'
 
-      MULTIMEDIA_URL: 'ec2-54-173-77-159.compute-1.amazonaws.com'
+      MULTIMEDIA_URL: 'ec2-54-80-234-178.compute-1.amazonaws.com'
       MULTIMEDIA_PORT: '9000'
       MULTIMEDIA_BASE_ENDPOINT: 'api/multimedia'
+      
+      #Ubicacion_Microservice
+      
+      AUTH_URL: 'ec2-3-81-233-113.compute-1.amazonaws.com'
+      AUTH_PORT: '5500'
+      AUTH_USERS_ENTRY: 'sa-auth-ms/resources/users'
 
     ports:
       - '3000:3000'
