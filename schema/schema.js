@@ -6,7 +6,7 @@ import {ubication_schema, ubication_queries, ubication_mutations} from './ubicat
 import {search_schema, search_querys, search_mutations} from './search_schema/search_schema'
 import {comments_schema,comments_querys,comments_mutations} from './comentarios_schema/comentarios_schema'
 import {user_schema, user_querys, user_mutations} from './user_schema/user_schema'
-import {login_schema, login_mutations} from './user_schema/login_schema'
+import {session_schema, session_mutations} from './user_schema/session_schema'
 import {publication_schema, publication_querys, publication_mutations} from './publication_schema/publication_schema'
 
 const schema = gql`
@@ -26,7 +26,7 @@ const schema = gql`
         ${ubication_mutations}
         ${comments_mutations}
         ${user_mutations}
-        ${login_mutations}  
+        ${session_mutations}  
         ${publication_mutations}
     }        
 
@@ -35,7 +35,7 @@ const schema = gql`
     ${ubication_schema}
     ${comments_schema}
     ${user_schema}
-    ${login_schema}
+    ${session_schema}
     ${publication_schema}
 `;
 

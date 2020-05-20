@@ -19,11 +19,11 @@ export const user_schema = `
 
 export const user_querys = `
     users: [User]!
-    getUser(email: String): User!
+    getUser(id: Int): User
 `
 
 export const user_mutations = `
-    storeUser(input: UserInput): User
+    createUser(input: UserInput): User
     updateUser(id : ID, input: UserInput): User
     deleteUser(id: ID): User
 `
