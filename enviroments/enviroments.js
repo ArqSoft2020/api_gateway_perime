@@ -25,10 +25,12 @@ export const context = {
     LOSPRECIOS_API: process.env.LOSPRECIOS_API,
 
     /* USER MICROSERVICE CONNECTIONS VARS */
-    USER_URL: process.env.USER_URL,
-    USER_PORT: process.env.USER_PORT,
-    USER_BASE_ENDPOINT: process.env.USER_BASE_ENDPOINT,
-    LOGIN_BASE_ENDPOINT: process.env.LOGIN_BASE_ENDPOINT,
+    USER_URL: process.env.USER_URL || "localhost",
+    USER_PORT: process.env.USER_PORT || "5000",
+    USER_BASE_ENDPOINT: process.env.USER_BASE_ENDPOINT || 'perime-user-ms/user',
+    SESSION_MOVIL_BASE_ENDPOINT: process.env.SESSION_MOVIL_BASE_ENDPOINT || 'perime-user-ms/sessionm',
+    SESSION_WEB_BASE_ENDPOINT: process.env.SESSION_WEB_BASE_ENDPOINT || 'perime-user-ms/sessionw',
+    VALIDATE_BASE_ENDPOINT: process.env.VALIDATE_BASE_ENDPOINT || 'perime-user-ms/validate',
 
     /* PUBLICATION MICROSERVICE CONNECTIONS VARS */
     PUBLICATION_URL: process.env.PUBLICATION_URL,
