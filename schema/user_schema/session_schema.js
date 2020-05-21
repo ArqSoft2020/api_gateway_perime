@@ -9,15 +9,11 @@ export const session_schema = `
         email: String
         password: String
     }
-
-    type NoSale {
-        Nada: String
-    }
 `
 
 export const session_mutations = `
     sessionmLogin(input: SessionInput): Token
-    sessionmLogout(id: Int): NoSale
+    sessionmLogout(id: Int): Token
     sessionwLogin(input: SessionInput): Token
-    sessionwLogout(id: Int): NoSale
+    sessionwLogout(id: Int): Token
 `
