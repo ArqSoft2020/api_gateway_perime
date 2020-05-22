@@ -16,8 +16,8 @@ import {storeComment,updateComment,deleteComment} from './comments_ms/comments_m
 
 import {users, getUser} from './user_ms/user_querys'
 import {createUser, updateUser, deleteUser} from './user_ms/user_mutations'
-import {sessionmLogin, sessionmLogout} from './user_ms/sessionm_mutations'
-import {sessionwLogin, sessionwLogout} from './user_ms/sessionw_mutations'
+import {sessionmLogin, sessionmLogout, sessionmRegister} from './user_ms/sessionm_mutations'
+import {sessionwLogin, sessionwLogout, sessionwRegister} from './user_ms/sessionw_mutations'
 
 import {publications, getPublication} from './publication_ms/publication_querys'
 import { updatePublication, createPublication, deletePublication} from './publication_ms/publication_mutations'
@@ -79,6 +79,8 @@ const resolvers = {
         sessionmLogout,
         sessionwLogin,
         sessionwLogout,
+        sessionmRegister,
+        sessionwRegister,
 
         deletePublication,
         createPublication,
