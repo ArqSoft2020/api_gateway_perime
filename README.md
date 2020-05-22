@@ -8,6 +8,131 @@ Para desplegar esta aplicación en docker use :
 sudo docker-compose up --build
 ```
 
+# Microservicio de Usuario
+
+## QUERYS
+
+```
+{
+  users{
+    id_user,
+    username_user,
+    passhash_user,
+    address_user,
+    cellphone_user,
+    email_user
+  }
+  
+  getUser(id:1){
+    id_user,
+    username_user,
+    passhash_user,
+    address_user,
+    cellphone_user,
+    email_user,
+  }
+  
+}
+```
+## MUTATIONS
+
+```
+mutation {
+  createUser(input:
+    {
+      username_user: "luaavilagu",
+      passhash_user: "password",
+      address_user: "Cra. 102 # 30x - 33",
+      cellphone_user: "3001234567",
+      email_user: "luaavilagu@temp.com"
+    }
+  )
+  {
+    id_user,
+    username_user,
+    passhash_user,
+    address_user,
+    cellphone_user,
+    email_user
+  }
+}
+mutation {
+  updateUser(id: 1, input:
+    {
+      username_user: "luaavilagu1",
+      passhash_user: "password1",
+      address_user: "Cra. 102 # 30x - 31",
+      cellphone_user: "3001234561",
+      email_user: "luaavilagu1@temp.com"
+    }
+  )
+  {
+    id_user,
+    username_user,
+    passhash_user,
+    address_user,
+    cellphone_user,
+    email_user
+  }
+}
+mutation {
+  deleteUser(id:1){
+    id_user,
+    username_user,
+    passhash_user,
+    address_user,
+    cellphone_user,
+    email_user
+  }
+}
+```
+
+# Microservicio de Session
+
+## MUTATIONS
+
+```
+mutation {
+  sessionmLogin(input:
+    {
+      email: "luaavilagu@temp.com",
+      password: "password"
+    }
+  )
+  {
+    id_session,
+    token_session
+  }
+}
+mutation {
+  sessionmLogout(id: 1)
+  {
+    id_session,
+    token_session  
+  }
+}
+mutation {
+  sessionwLogin(input:
+    {
+      email: "luaavilagu@temp.com",
+      password: "password"
+    }
+  )
+  {
+    id_session,
+    token_session
+  }
+}
+mutation {
+  sessionwLogout(id: 1)
+  {
+    id_session,
+    token_session  
+  }
+}
+```
+
+
 # Microservicio de Multimedia
 
 ## QUERYS
