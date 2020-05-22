@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {createUser} from './user_mutations';
 
 /* #########################    MUTATION  ######################### */
 
@@ -9,7 +10,17 @@ export const sessionwLogin = async (_, {input}, ctx) => {
 }
 
 /* LOGOUT USER BY ID IN WEB*/
-export const sessionwLogout = async (_, {id}, ctx) => {
-    const data = JSON.stringify(input);
+export const sessionwLogout = async (_, {id}, ctx) => {    
     return await axios.delete(`http://${ctx.USER_URL}:${ctx.USER_PORT}/${ctx.SESSION_WEB_BASE_ENDPOINT}/${id}`, _,).then(res => res.data)
+}
+
+export const sessionwRegister = async (_, {input}, ctx) => {
+    try{
+        const user = await createUser(_, input, ctx);
+        let data = JSON.stringify(input);
+        data = {email:data.email_user, password:data.passhash_user}
+        return sessionwLogin(_, data, ctx)
+    }catch{
+        return new Error('Error en el Servidor en el apigateway! vaya y mire que paso<<');
+    }
 }

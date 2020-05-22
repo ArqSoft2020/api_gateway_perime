@@ -25,7 +25,7 @@ export const context = {
     LOSPRECIOS_API: process.env.LOSPRECIOS_API,
 
     /* USER MICROSERVICE CONNECTIONS VARS */
-    USER_URL: process.env.USER_URL || "localhost",
+    USER_URL: process.env.USER_URL || "3.92.145.89",
     USER_PORT: process.env.USER_PORT || "5000",
     USER_BASE_ENDPOINT: process.env.USER_BASE_ENDPOINT || 'perime-user-ms/user',
     SESSION_MOVIL_BASE_ENDPOINT: process.env.SESSION_MOVIL_BASE_ENDPOINT || 'perime-user-ms/sessionm',
