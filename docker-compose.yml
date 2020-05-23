@@ -11,7 +11,7 @@ services:
       MULTIMEDIA_PORT: '9000'
       MULTIMEDIA_BASE_ENDPOINT: 'api/multimedia'
       
-      SEARCH_URL: '34.69.30.153'
+      SEARCH_URL: '3.92.233.187'
       SEARCH_PORT: '1859'
       SEARCH_BASE_ENDPOINT: ''
 
